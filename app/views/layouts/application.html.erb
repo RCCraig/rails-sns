@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bazaar</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <title>BZR - Create your Shop</title>
+    <meta/>
+    <meta/>
+    <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
   </head>
-
   <body>
-    <%= yield %>
+    <header>
+      <%= render 'shared/header' %>
+    </header>
+    <section class="content">      
+      <%= yield %>
+    </section>
+    <footer>
+      &copy 2018 BZarre
+    </footer>
   </body>
 </html>
