@@ -1,12 +1,7 @@
 class ProductsController < ApplicationController
   
   def index
-    @products = Product.all
-
-    respond_to do |format|
-      format.html
-      format.json
-    end
+    @products = Product.all    
   end
 
   def new
@@ -14,7 +9,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(status_params)
+    @product = Product.new(product_params)
    
     if @product.save
       flash[:notice] = "Product created!"
